@@ -1,25 +1,27 @@
 <?php
 trait Active
 {
-	public function defindYourSelf()
+    public function defindYourSelf()
     {
         return get_class($this);
     }
 }
 
-interface Boss {
+interface Boss
+{
     public function checkValidSlogan();
 }
 
-abstract class Country 
+abstract class Country
 {
     use Active;
 
-    protected $slogan;  
-          
+    protected $slogan;
+
     abstract public function sayHello();
 
-    function setSlogan($slogan){
+    function setSlogan($slogan)
+    {
         $this->slogan = $slogan;
     }
 
@@ -83,6 +85,6 @@ var_dump($englandCountry->checkValidSlogan()); // true
 echo "<br>";
 var_dump($vietnamCountry->checkValidSlogan()); // false
 
-echo '<br>I am ' . $englandCountry->defindYourSelf(); 
+echo '<br>I am ' . $englandCountry->defindYourSelf();
 echo "<br>";
 echo 'I am ' . $vietnamCountry->defindYourSelf();
