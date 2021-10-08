@@ -15,8 +15,10 @@ abstract class Country
 {
     use Active;
 
-    protected $slogan;        
+    protected $slogan;  
+          
     abstract public function sayHello();
+
     function setSlogan($slogan){
         $this->slogan = $slogan;
     }
@@ -83,5 +85,4 @@ var_dump($vietnamCountry->checkValidSlogan()); // false
 
 echo '<br>I am ' . $englandCountry->defindYourSelf(); 
 echo "<br>";
-echo 'I am ' . $vietnamCountry->defindYourSelf(); 
-?>
+echo 'I am ' . $vietnamCountry->defindYourSelf();
